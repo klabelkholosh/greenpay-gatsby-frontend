@@ -1,0 +1,24 @@
+.body {
+  width: 80%;
+}
+
+.tabHeaderandPane {
+  color: #0b428d;
+  font-weight: bold;
+  padding-bottom: 0.8em;
+}
+
+.tabPane {
+  height: 32em;
+  overflow-y: auto;
+  font-weight: lighter;
+  margin-bottom: 1em;
+}
+
+.export {
+  float: left;
+  height: 1em;
+}
+.pagination {
+  float: right;
+}

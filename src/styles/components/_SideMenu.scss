@@ -1,0 +1,91 @@
+.greenpayWhite {
+  height: 2rem;
+  @include flexbox;
+}
+
+.bottomDiv {
+  @include flexbox;
+  flex-direction: row;
+  align-self: flex-end;
+}
+.sideMenuContainer {
+  height: 100%;
+  background-image: linear-gradient($colour-sanJuan, $colour-greenpay-blue);
+  padding-left: 3rem;
+  padding-top: 2rem;
+  width: 18rem;
+  border-radius: 0.5rem 0rem 0rem 0.5rem;
+  @include flexbox;
+  flex-direction: column;
+  justify-items: baseline;
+
+  .sideMenuItem {
+    @include flexbox;
+    flex-direction: row;
+    margin-bottom: 2em;
+  }
+}
+
+.sideMenuLink {
+  color: white;
+  @include font-size-map($html-font-size);
+  opacity: 0.5;
+}
+
+.sideMenuActiveLink {
+  color: yellow;
+  @include font-size-map($html-font-size);
+  opacity: 1;
+}
+
+.sideMenuList {
+  padding-top: 1em;
+}
+
+.sideMenuMainBlock {
+  @include flexbox;
+  margin: 0 auto;
+  border-radius: 0.5em;
+  background-color: white;
+  width: 90em;
+  height: 54em;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+
+  flex-direction: row;
+  justify-content: left;
+}
+
+.sideMenuSubscreen {
+  @include flexbox;
+  justify-content: flex-end;
+}
+
+.sideMenuProfile {
+  @include flexbox;
+  justify-content: center;
+  margin: 0 auto;
+  width: 6em;
+  height: 6em;
+  margin-left: 3em;
+  margin-bottom: 1em;
+  background-color: lightgray;
+  -webkit-border-radius: 6em;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 6em;
+  -moz-background-clip: padding;
+  border-radius: 6em;
+  background-clip: padding-box;
+  background-size: cover;
+  background-position: center center;
+
+  border-color: darkgray;
+  border: solid;
+}
+
+.sideMenuSubscreens {
+  width: 100%;
+}

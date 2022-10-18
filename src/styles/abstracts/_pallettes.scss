@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------
+// Pallettes
+// --------------------------------------------------------------------------
+
+// this pallette describes the 'frontPage' area, ie. all pages which initially a non-logged-in customer should see when visiting the site.
+$pallette-front-page: (
+
+    // frontPage-wide colours
+    font-primary: $fcolour-primary-blue,
+    font-highlight: $fcolour-primary-green,
+    button-primary: $fcolour-primary-green,
+
+    // colours specific to 'header' section
+    header-section: (),
+
+    // colours specific to 'three-icon' section 
+    three-icon-section: (
+        background: $fcolour-front-page-BG-light-blue-grey,
+    ),
+  
+    // colours specific to 'parking-scene' section 
+    parking-scene-section: (
+      font-highlight: $fcolour-front-page-primary-blue-purple,
+      background-left-slant: $fcolour-front-page-BG-light-blue,
+      background-right-slant: $fcolour-front-page-BG-light-green,
+    )
+);

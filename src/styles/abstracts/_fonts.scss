@@ -1,0 +1,66 @@
+/*
+@font-face {
+    font-family: Lato;
+    src: url('font-lato/lato-regular-webfont.woff2') format('woff2'),
+         url('font-lato/lato-regular-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: LatoBold;
+    src: url('font-lato/lato-bold-webfont.woff2') format('woff2'),
+         url('font-lato/lato-bold-webfont.woff') format('woff');
+    font-weight: 700;
+}
+@font-face {
+    font-family: LatoItalic;
+    src: url('font-lato/lato-italic-webfont.woff2') format('woff2'),
+         url('font-lato/lato-italic-webfont.woff') format('woff');
+    font-style: italic;
+}
+@font-face {
+    font-family: LatoBoldItalic;
+    src: url('font-lato/lato-bolditalic-webfont.woff2') format('woff2'),
+         url('font-lato/lato-bolditalic-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+*/
+
+@font-face {
+  font-family: MainFont;
+  src: url('../../fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../../fonts/Montserrat-Regular.woff') format('woff'),
+    url('../../fonts/Montserrat-Regular.ttf') format('truetype'),
+    url('../../fonts/Montserrat-Regular.eot') format('opentype');
+}
+@font-face {
+  font-family: MainFont_Bold;
+  src: url('../../fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../../fonts/Montserrat-Bold.woff') format('woff'),
+    url('../../fonts/Montserrat-Bold.ttf') format('truetype'),
+    url('../../fonts/Montserrat-Bold.eot') format('opentype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: MainFont_Italic;
+  src: url('../../fonts/Montserrat-Italic.woff2') format('woff2'),
+    url('../../fonts/Montserrat-Italic.woff') format('woff'),
+    url('../../fonts/Montserrat-Italic.ttf') format('truetype'),
+    url('../../fonts/Montserrat-Italic.eot') format('opentype');
+  font-style: italic;
+}
+@font-face {
+  font-family: MainFont_BoldItalic;
+  src: url('../../fonts/Montserrat-BoldItalic.woff2') format('woff2'),
+    url('../../fonts/Montserrat-BoldItalic.woff') format('woff'),
+    url('../../fonts/Montserrat-BoldItalic.ttf') format('truetype'),
+    url('../../fonts/Montserrat-BoldItalic.eot') format('opentype');
+  font-style: italic;
+}
+@font-face {
+  font-family: MainFont_Light;
+  src: url('../../fonts/Montserrat-Light.woff2') format('woff2'),
+    url('../../fonts/Montserrat-Light.woff') format('woff'),
+    url('../../fonts/Montserrat-Light.ttf') format('truetype'),
+    url('../../fonts/Montserrat-Light.eot') format('opentype');
+  font-weight: 100;
+}

@@ -1,0 +1,44 @@
+//--------------------table style on billConfirmationSubscreen is unique to this subscreen
+.confirmationContainer {
+  margin-left: 6em;
+}
+
+.confirmationRow {
+  text-align: center;
+  padding: 1em;
+  background-color: #525252;
+  color: white;
+}
+
+.confirmationItem {
+  display: flex;
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  color: black;
+}
+
+.confirmationItem:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.confirmationItem:nth-child(odd) {
+  background-color: white;
+}
+
+.confirmationBillRow {
+  height: 20em;
+  overflow: scroll;
+}
+
+.confirmationTotalRow {
+  justify-content: flex-end;
+  padding: 1em;
+  background-color: #525252;
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 1em;
+}
+//------------------------end of table styling>

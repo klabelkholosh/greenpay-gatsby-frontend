@@ -1,0 +1,24 @@
+.register-button {
+  border-radius: 10px;
+  background-color: $colour-greenpay-green;
+  color: $colour-white;
+  @include font-size-map($html-font-size);
+  display: none;
+
+  // when screen width reaches certain size, hide burger
+  @media (min-width: $wrapSize) {
+    display: block;
+  }
+}
+
+.clear-border-button {
+  background-color: $colour-white;
+  border: 0.2em solid rgba(255, 255, 255, 0);
+  @include font-size-map($html-font-size);
+  display: none;
+
+  // when screen width reaches certain size, hide burger
+  @media (min-width: $wrapSize) {
+    display: block;
+  }
+}

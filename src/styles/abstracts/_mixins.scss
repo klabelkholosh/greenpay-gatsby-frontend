@@ -1,0 +1,245 @@
+// ***************************************
+// Mixins!
+// ***************************************
+
+// -----------------------------------------------------
+// This is an attempt to create a tilted angle in CSS
+// Currently not working...
+// -----------------------------------------------------
+@mixin tilted($angle, $color) {
+  $height: get-tilted-height($angle);
+
+  position: relative;
+  background-color: $color;
+
+  &::before {
+    content: '';
+    padding-top: $height;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    background-image: linear-gradient($angle, $color 50%, transparent 50%);
+  }
+}
+
+// -----------------------------
+// Responsive font sizing mixins
+// -----------------------------
+
+// responsive font size mixin. This takes a map of font-sizes (these are defined in _variables.scss),
+// which are a map of widths: font-size for this width.
+@mixin font-size-map($font-size-map) {
+  @each $breakpoint, $font-size in $font-size-map {
+    @if $breakpoint == null {
+      font-size: $font-size;
+    } @else {
+      @include breakpoint($breakpoint) {
+        font-size: $font-size;
+      }
+    }
+  }
+}
+
+// breakpoint mixin. Used by font-size-map mixin to construct media queries, based on our font-size-map variable.
+@mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
+  @if $mq2 == false {
+    @media ($maxmin: $mq01) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $mq01) and (max-width: $mq2) {
+      @content;
+    }
+  }
+}
+
+// ------------------------------------------
+// Responsive older browser compatibility
+// ------------------------------------------
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin flex1 {
+  -webkit-box-flex: 1; /* OLD - iOS 6-, Safari 3.1-6 */
+  -moz-box-flex: 1; /* OLD - Firefox 19- */
+  width: 20%; /* For old syntax, otherwise collapses. */
+  -webkit-flex: 1; /* Chrome */
+  -ms-flex: 1; /* IE 10 */
+  flex: 1; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// ------------------------------------------
+// Front-Page methods
+// ------------------------------------------
+
+// Common left / right padding sizes for all front page containers
+@mixin padding-leftRight {
+  @each $breakpoint, $padSize in $padding-map {
+    @if $breakpoint == null {
+      padding-left: $padSize;
+      padding-right: $padSize;
+    } @else {
+      @include breakpoint($breakpoint) {
+        padding-left: $padSize;
+        padding-right: $padSize;
+      }
+    }
+  }
+}
+
+// keep two cols in frontPage sections evenly spaced,
+// plus ensure when screen made smaller that text bcecomes centered, columns instead of rows
+@mixin frontPage-textAndSpacing($textAlign) {
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  @media (min-width: $wrapSize) {
+    justify-content: space-between;
+    flex-direction: row;
+    text-align: $textAlign;
+  }
+
+  .sectionText {
+    display: block;
+
+    @media (min-width: $wrapSize) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-evenly;
+      text-align: $textAlign;
+      // word-break: break-word;
+      // width: rem;
+    }
+  }
+}
+
+// ----------------------------------------------------------
+// sass-burger: Joren van Hee (http://joren.co/sass-burger/)
+// Used under MIT license.
+// ----------------------------------------------------------
+
+// Burger
+@mixin burger($width: 30px, $height: 5px, $gutter: 3px, $color: #000, $border-radius: 0, $transition-duration: 0.3s) {
+  $burger-height: $height !global;
+  $burger-gutter: $gutter !global;
+
+  position: relative;
+  margin-top: $height + $gutter;
+  margin-bottom: $height + $gutter;
+
+  @if $sass-burger-add-vendor-prefixes {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  user-select: none;
+
+  // 1. Fixes jagged edges in Firefox, see issue #10.
+  &,
+  &::before,
+  &::after {
+    display: block;
+    width: $width;
+    height: $height;
+    background-color: $color;
+    outline: 1px solid transparent; // 1
+    @if $border-radius != 0 {
+      border-radius: $border-radius;
+    }
+
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transition-property: background-color, -webkit-transform;
+      -moz-transition-property: background-color, -moz-transform;
+      -o-transition-property: background-color, -o-transform;
+    }
+    transition-property: background-color, transform;
+
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transition-duration: $transition-duration;
+      -moz-transition-duration: $transition-duration;
+      -o-transition-duration: $transition-duration;
+    }
+    transition-duration: $transition-duration;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+  }
+
+  &::before {
+    top: -($height + $gutter);
+  }
+
+  &::after {
+    top: $height + $gutter;
+  }
+}
+
+// Select parts of the burger
+@mixin burger-parts {
+  &,
+  &::before,
+  &::after {
+    @content;
+  }
+}
+
+@mixin burger-top {
+  &::before {
+    @content;
+  }
+}
+
+@mixin burger-middle {
+  & {
+    @content;
+  }
+}
+
+@mixin burger-bottom {
+  &::after {
+    @content;
+  }
+}
+
+// Burger animations
+@mixin burger-to-cross($color: auto) {
+  & {
+    background-color: transparent;
+  }
+  @if ($color != auto) {
+    &::before,
+    &::after {
+      background-color: $color;
+    }
+  }
+  &::before {
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+      -moz-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+      -ms-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+      -o-transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+    }
+    transform: translateY($burger-gutter + $burger-height) rotate(45deg);
+  }
+  &::after {
+    @if $sass-burger-add-vendor-prefixes {
+      -webkit-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+      -moz-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+      -ms-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+      -o-transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+    }
+    transform: translateY(-($burger-gutter + $burger-height)) rotate(-45deg);
+  }
+}

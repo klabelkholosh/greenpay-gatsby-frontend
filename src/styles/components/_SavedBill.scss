@@ -1,0 +1,71 @@
+.savedBillContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.savedBillDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-bottom-style: solid;
+  border-width: 4px 0;
+  border-color: #f3f7fc;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.billIcon {
+  font-size: 2em;
+  width: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1.8em;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5em;
+  width: 5em;
+  margin-right: 3em;
+  border-top-left-radius: 50% 50%;
+  border-top-right-radius: 50% 50%;
+  border-bottom-right-radius: 50% 50%;
+  border-bottom-left-radius: 50% 50%;
+  border: solid cadetblue 2px;
+}
+
+.amountColumn {
+  display: flex;
+  align-items: center;
+  padding-right: 3em;
+  padding-left: 3em;
+  background-color: #d5ebbf;
+}
+
+.input {
+  border-radius: 4px;
+  border: solid #60ac17 2px;
+}
+
+.actionColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+}
+
+.deleteIcon {
+  height: 2em;
+}
+
+.editIcon {
+  height: 2em;
+}
+
+.billName {
+  font-size: 1.1em;
+  font-weight: bold;
+}

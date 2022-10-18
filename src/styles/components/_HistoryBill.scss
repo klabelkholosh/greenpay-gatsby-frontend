@@ -1,0 +1,88 @@
+#HistoryPage {
+  .tick {
+    padding: 1.7em 0;
+  }
+  .amountField {
+    font-size: 14px;
+  }
+
+  .historyBillContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: centre;
+    width: 100%;
+    border-bottom-style: solid;
+    border-width: 2px 0;
+    border-color: #f3f7fc;
+    height: 5.5em;
+    align-self: center;
+    background-color: #fff;
+    border-radius: 0.2em;
+  }
+
+  .historyBillContainer:click {
+    border: solid 2px;
+    /*background-color: #f3f5f9;*/
+    box-shadow: gray 0px 2px 4px 1px;
+  }
+
+  .historyBillContainer:hover {
+    background-color: #f3f7fc;
+  }
+
+  .historyBillDetails {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    font-size: 12px;
+    color: black;
+    text-align: centre;
+  }
+
+  .savedHistoryBillIcon {
+    font-size: 2em;
+    width: 2em;
+    text-align: center;
+    border-radius: 1.8em;
+  }
+
+  .iconContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4.5em;
+    width: 4.5em;
+    margin-right: 3em;
+    border-top-left-radius: 50% 50%;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    border-bottom-left-radius: 50% 50%;
+    border: solid cadetblue 2px;
+  }
+
+  .billName {
+    padding-left: 2em;
+    width: 25%;
+  }
+  .billDate {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: 25%;
+  }
+
+  .more-button {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+    height: 100%;
+    width: 100%;
+    /*background-color: #49980a*/
+  }
+
+  .reference {
+    width: 20%;
+  }
+}

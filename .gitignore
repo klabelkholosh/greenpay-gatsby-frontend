@@ -1,3 +1,6 @@
+node_modules
 public
 static
 .cache/
+.env
+.DS_Store

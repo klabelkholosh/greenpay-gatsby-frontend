@@ -1,0 +1,34 @@
+.card {
+  width: 15em;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  min-width: 18em;
+  border-color: gray;
+  text-align: center;
+  border-radius: 1em;
+  background-color: white;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  margin-top: 2em;
+  -webkit-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.15);
+
+  .centerText {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    vertical-align: center;
+  }
+
+  button {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    padding: 0.2em;
+    width: 6em;
+    font-size: 1.2em;
+    height: 2em;
+    border-radius: 2rem;
+  }
+}

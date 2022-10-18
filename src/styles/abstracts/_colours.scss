@@ -1,0 +1,94 @@
+// Colours! Any suggestions on how to best group or organize the below are welcome.
+// The basic idea is:
+// 1. Define all colour variables named according to their colour description
+//    (ie. $colour-rose-gold), argument is HSL (hue, saturation, lightness) code.
+//    Actual name is chosen from plugging the hex code into http://chir.ag/projects/name-that-color which pops out a nice name!
+// 2. Add these to Bootstrap's '$theme-colors' colour map.
+//    I'm using the 'CSTM-' prefix to visually differentiate them as CUSTOM colours when they're added as classNames.
+//    Then, eg. if you've added a colour such as:
+//    $theme-colors: (
+//        "ep-green": hsl(91, 76%, 38%)
+//    );
+//    .. Bootstrap makes this colour available to use as a custom class,
+//    eg. btn-ep-green, text-ep-green, bg-ep-green, alert-ep-green, etc..
+//    which is pretty cool.
+//
+// --------------------------------------------------------------------------
+//  Ideally, in sub-categories below,
+//  colours should be organized from HSL lightness value descending.
+// --------------------------------------------------------------------------
+
+$theme-colors: (
+  // Flagship colours
+    'CSTM-ep-green': hsl(91, 76%, 38%),
+  'CSTM-ep-blue': hsl(216, 100%, 16%),
+  // also known as 'downriver'. / REMOVE ON MOVE: Bottom right of footer gradient
+    // Blue colours
+    'CSTM-periwinkle': hsl(239, 100%, 90%),
+  // REMOVE ON MOVE: frontPage parking-scene blue slanted BG
+    'CSTM-onahau': hsl(182, 100%, 88%),
+  'CSTM-brightTurquoise': hsl(183, 100%, 46%),
+  'CSTM-cornflowerBlue': hsl(239, 94%, 68%),
+  // elec-scene "Push" text colour
+    'CSTM-blueViolet': hsl(239, 43%, 49%),
+  // REMOVE ON MOVE: frontPage parking-scene blue-building store front main / laptop keyboard keys fill
+    'CSTM-minsk': hsl(238, 45%, 35%),
+  'CSTM-sanJuan': hsl(215, 43%, 33%),
+  // REMOVE ON MOVE: frontPage elec-scene light blue slanted BG / top left of footer gradient
+    'CSTM-jacarta': hsl(238, 45%, 28%),
+  'CSTM-portGore': hsl(248, 35%, 23%),
+  'CSTM-prussianBlue': hsl(213, 98%, 18%),
+  // REMOVE ON MOVE: frontPage elec-scene dark blue slanted BG
+    // Yellow colours
+    'CSTM-gorse': hsl(55, 100%, 67%),
+  'CSTM-amber': hsl(46, 100%, 50%),
+  // REMOVE ON MOVE: frontPage elec-scene yellow font
+    'CSTM-gold': hsl(52, 100%, 48%),
+  'CSTM-corn': hsl(44, 100%, 44%),
+  'CSTM-buddhaGold': hsl(45, 92%, 39%),
+  // Creamy/peachy colours
+    'CSTM-peach': hsl(36, 100%, 87%),
+  'CSTM-moccasin': hsl(38, 100%, 86%),
+  'CSTM-monaLisa': hsl(8, 100%, 79%),
+  'CSTM-salmon': hsl(12, 100%, 69%),
+  'CSTM-flamingo': hsl(8, 84%, 59%),
+  // Green colours
+    'CSTM-teaGreen': hsl(95, 70%, 80%),
+  // REMOVE ON MOVE: frontPage parking-scene green slanted BG
+    'CSTM-feijoa': hsl(95, 54%, 65%),
+  'CSTM-aquaForest': hsl(143, 28%, 52%),
+  'CSTM-killarney': hsl(143, 27%, 35%),
+  'CSTM-limeade': hsl(99, 100%, 34%),
+  // REMOVE ON MOVE: most frontPage green buttons
+    'CSTM-chaletGreen': hsl(95, 30%, 29%),
+  'CSTM-stromboli': hsl(143, 27%, 25%),
+  // Brown colours
+    'CSTM-domino': hsl(26, 21%, 48%),
+  // Black/grey/white colours
+    'CSTM-white': hsl(0, 100%, 100%),
+  'CSTM-athensGrey': hsl(214, 17%, 94%),
+  // REMOVE ON MOVE: frontPage light blue 3-icons bg
+    'CSTM-alto': hsl(109, 0%, 85%),
+  // REMOVE ON MOVE: frontPage car-scene: car badge, sidewalk light edge
+    'CSTM-silverChalice': hsl(109, 0%, 69%),
+  'CSTM-mountainMist': hsl(255, 3%, 61%),
+  'CSTM-emperor': hsl(360, 1%, 34%),
+  'CSTM-dune': hsl(18, 3%, 21%),
+  // REMOVE ON MOVE: frontPage car-scene: tyres fill
+    // Custom Gradients
+    'CSTM-Gradient-EPBlue': hsl(216, 100%, 16%)
+);
+
+// --------------------------------------------------------------------------
+// 'Function-based' colours
+// --------------------------------------------------------------------------
+
+// primary / system-wide colours
+// $fcolour-primary-blue: $colour-greenpay-blue;
+// $fcolour-primary-green: $colour-limeade;
+
+// frontPage colours
+// $fcolour-front-page-primary-blue-purple: $colour-blueViolet;
+// $fcolour-front-page-BG-light-blue-grey: $colour-athensGrey;
+// $fcolour-front-page-BG-light-blue: $colour-periwinkle;
+// $fcolour-front-page-BG-light-green: $colour-teaGreen;

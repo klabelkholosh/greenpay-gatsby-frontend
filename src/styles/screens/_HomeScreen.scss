@@ -1,0 +1,175 @@
+.mainContainer {
+}
+
+// firstSection - laptop icon, 'A better way to pay'
+.firstSection {
+  @include padding-leftRight;
+  @include flexbox;
+  @include frontPage-textAndSpacing(right);
+
+  // attempting to create a tilt..
+  // @include tilted($angle: 3deg, $color: rgb(255, 255, 255));
+
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  order: 1;
+
+  // this may still need work to be IE-compatible
+  .mainLogo {
+    // width: 100%;
+    height: 16rem;
+    margin-bottom: 20px; // used to create distance between text and logo
+
+    // when screen width reaches certain size, change logo size and remove mobile-view spacing
+    @media (min-width: $wrapSize) {
+      margin-bottom: 0px;
+      height: 24rem;
+    }
+  }
+}
+
+// Services - 3 icon section - 'What can we help you do better?'
+.servicesSection {
+  @include padding-leftRight;
+
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background-color: $fcolour-front-page-BG-light-blue-grey;
+  width: 100%;
+}
+
+// Parking Fine section, icon, text 'Pay your traffic fine speedily', etc.
+.parkingSection {
+  @include padding-leftRight;
+  @include flexbox;
+  @include frontPage-textAndSpacing(left);
+
+  background-color: $fcolour-front-page-BG-light-green;
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  order: 1;
+
+  .parkingImage {
+    height: 16rem;
+    margin-top: 20px; // used to create distance between text and logo
+
+    // when screen width reaches certain size, change logo size and remove mobile-view spacing
+    @media (min-width: $wrapSize) {
+      margin-top: 0px;
+      height: 24rem;
+    }
+  }
+}
+
+// Electricity section, 'Electricity at the push of a button', etc.
+.electricitySection {
+  @include padding-leftRight;
+  @include flexbox;
+  @include frontPage-textAndSpacing(right);
+
+  background-color: $colour-prussianBlue;
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+  order: 1;
+
+  .phonePicture {
+    height: 16rem;
+    margin-bottom: 20px; // used to create distance between text and logo
+
+    // when screen width reaches certain size, change logo size and remove mobile-view spacing
+    @media (min-width: $wrapSize) {
+      margin-bottom: 0px;
+      height: 20rem;
+    }
+  }
+}
+
+// Receivers - Telkom logos, etc.
+.receiverSection {
+  @include padding-leftRight;
+  @include flexbox;
+  @include frontPage-textAndSpacing(center);
+
+  padding-top: 3em;
+  padding-bottom: 3em;
+
+  .receiverIcon {
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 3.5rem;
+    height: 4rem;
+    align-self: center;
+
+    // when screen width reaches certain size, change logo size and remove mobile-view spacing
+    @media (min-width: $wrapSize) {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      height: 4rem;
+    }
+  }
+}
+
+// Other miscellany.. might need looking at
+
+.greenpayLogo {
+  height: 4em;
+}
+
+.leftCol {
+  margin-left: 0rem;
+
+  @media (min-width: $wrapSize) {
+    margin-left: 6rem;
+  }
+}
+
+.rightCol {
+  text-align: right;
+  margin-left: 0rem;
+
+  @media (min-width: $wrapSize) {
+    margin-left: 6rem;
+  }
+}
+
+.purple {
+  color: #6d74f5;
+}
+
+.green {
+  color: #5fac17;
+}
+.dark {
+  color: #515251;
+  font-size: 1.5em;
+}
+.greyText {
+  color: #515251;
+  font-size: 1.5em;
+}
+.white {
+  color: $colour-white;
+}
+.row {
+  @include flexbox;
+  @include flex1;
+  flex-direction: row;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.servicesIcon {
+  height: 8em;
+}
+
+.aligner {
+  @include flexbox;
+  align-items: center;
+  justify-content: f;
+}

@@ -1,0 +1,69 @@
+
+@import 'abstracts/colours';
+
+// override Bootstrap _variables.scss options
+$enable-gradients: true;
+
+// override Bootstrap classes
+.card-img-top {
+    width: 100%;
+    height: 10vw;
+}
+
+// custom classes...
+.CSTM-rounded-xl {
+    border-radius: 1.2rem !important;
+}
+
+.CSTM-font-size-smaller {
+    font-size: 0.8rem !important;
+}
+
+.CSTM-font-size-frontPage-heading {
+    font-size: 2rem !important;
+
+    // md 
+    @media (min-width: 992px) {
+        font-size: 2.2rem !important;
+    }
+
+    // lg
+    @media (min-width: 1200px) {
+        font-size: 2.5rem !important;
+    }
+}
+
+.CSTM-image-width-frontPage {
+    width: 80% !important;
+
+    // md 
+    @media (min-width: 992px) {
+        width: 100% !important;
+    }
+}
+
+// these 4 styles below are for creating the slanted dividers between sections on the front page
+.slantRightTopUnderlay {
+    transform: rotate(2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.slantRightTopOverlay {
+    transform: rotate(2deg);
+}
+
+.slantRightBottomOverlay {
+    /* to be continued... */
+}
+
+.slantRightBottomUnderlay {
+    transform: rotate(2deg);
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
